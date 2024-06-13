@@ -6,7 +6,7 @@
 #include "cappuccino.h"
 #include "mocha.h"
 
-/*
+
 TEST(HW5Test, TEST1) {
     Cinnamon    cinnamon{2};  
     EXPECT_EQ(cinnamon.get_name(), "Cinnamon");
@@ -47,8 +47,10 @@ TEST(HW5Test, TEST4) {
     Cappuccino cappuccino{};
     EXPECT_EQ(cappuccino.get_name(), "Cappuccino");
     auto ingredients = cappuccino.get_ingredients();
+    // std::cout << "everything is ok until this line" << std::endl;
 
     EXPECT_EQ(ingredients.size(), 3);
+    // std::cout << "everything is ok until this line" << std::endl;
     for(const auto& i : ingredients)
         EXPECT_TRUE(i->get_name() == "Espresso" || i->get_name() == "Milk" || i->get_name() == "MilkFoam");
 }
@@ -57,7 +59,9 @@ TEST(HW5Test, TEST5) {
     Cappuccino cappuccino{};
     EXPECT_DOUBLE_EQ(cappuccino.price(), 55);
     cappuccino.add_side_item(new Cinnamon{1});
+    // std::cout << "everything is ok until this line" << std::endl;
     EXPECT_DOUBLE_EQ(cappuccino.price(), 60);
+    std::cout << "everything is ok until this line" << std::endl;
 }
 
 TEST(HW5Test, TEST6) {
@@ -121,7 +125,7 @@ TEST(HW5Test, TEST12) {
     Mocha mocha{};
     mocha.brew();
 }
-*/
+
 
 
 
